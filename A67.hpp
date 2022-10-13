@@ -1,5 +1,3 @@
-//
-
 #include <iomanip>
 #include <iostream>
 using namespace std;
@@ -7,6 +5,7 @@ using namespace std;
 // complete the Overloading function swap( )
 // swap ( ) function has the difference number of parameters from 2 to 4
 // For example, swap(10, 20); swap(10, 20, 30); swap(10, 20, 30, 40)
+
 
 
 void getinput(int &);
@@ -18,7 +17,8 @@ void swap(int &, int &, int &);
 void swap(int &, int &, int &, int &);
 
 
-int main() {
+int main() 
+{
     int num;
     int val1, val2, val3, val4;
 
@@ -40,6 +40,7 @@ int main() {
             default: 
                 break;
         }
+
     }while(num != 1);
 
 }
@@ -58,8 +59,8 @@ void getinput(int &val1, int &val2) {
 void swap(int &val1, int &val2) {
     int temp_val;
     val1 = temp_val;
-    val2 = val1;
-    val1 = temp_val;
+    val1 = val2;
+    val2 = temp_val;
 
 }
 
@@ -74,10 +75,10 @@ void getinput(int &val1, int &val2, int &val3) {
 }
 
 void swap(int &val1, int &val2, int &val3) {
-    int sum, max, med, min;
+    int sum, max, remainder, min;
     sum = val1 + val2 + val3;
 
-    if( (val1 > val2 && val1 > val3) )
+        if( (val1 > val2 && val1 > val3) )
         val1 = max;
     else if (val2 > val3)
         val2 = max;
@@ -91,7 +92,7 @@ void swap(int &val1, int &val2, int &val3) {
     else 
         val3 = min;
 
-    med = (max - min);
+    remainder = (sum - max - min);
 
 }
 
@@ -100,7 +101,7 @@ void getinput(int &val1, int &val2, int &val3, int &val4) {
     cin >> val1;
     cout << "Enter Value 2: ";
     cin >> val2;
-    cout << "Etner Value 3: ";
+    cout << "Enter Value 3: ";
     cin >> val3;
     cout << "Enter Value 4: ";
     cin >> val4;
@@ -110,7 +111,8 @@ void getinput(int &val1, int &val2, int &val3, int &val4) {
 void swap(int &val1, int &val2, int &val3, int &val4) {
     int temp_val;
     val1 = temp_val;
-    val2 = val1;
+    val1 = val2;
+    val2 = val3;
     val3 = val4;
     val4 = temp_val;
 
